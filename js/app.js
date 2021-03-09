@@ -3,7 +3,7 @@ const navSlide = ()=> {
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
     const navLinks = document.querySelectorAll('.nav-links li');
-    
+
     burger.addEventListener('click',()=>{
         //Toggle Nav
         nav.classList.toggle('nav-active');
@@ -14,7 +14,7 @@ const navSlide = ()=> {
             }else{
                 link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 1}s`;
             }
-            
+
         });
         //Burger Animation
         burger.classList.toggle('toggle');
@@ -35,20 +35,20 @@ window.onscroll = function () {
 let mainNavLinks = document.querySelectorAll(".nav-links li a");
 
 window.addEventListener("scroll", event => {
-  let fromTop = window.scrollY;
+    let fromTop = window.scrollY;
 
-  mainNavLinks.forEach(link => {
-    let section = document.querySelector(link.hash);
-    
-    if (
-        section.offsetTop <= fromTop &&
-        section.offsetTop + section.offsetHeight > fromTop
+    mainNavLinks.forEach(link => {
+        let section = document.querySelector(link.hash);
+
+        if (
+            section.offsetTop <= fromTop &&
+            section.offsetTop + section.offsetHeight > fromTop
         ) {
             link.classList.add("active");
-    } else {
-      link.classList.remove("active");
-    }
-  });
+        } else {
+            link.classList.remove("active");
+        }
+    });
 });
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -97,7 +97,7 @@ for(let i = 0; i < sortBtn.length; i++){
         }
 
         this.classList.add('current');
-        
+
 
         let targetData = this.getAttribute('data-target');
 
